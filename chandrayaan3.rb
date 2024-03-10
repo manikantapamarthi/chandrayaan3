@@ -1,4 +1,4 @@
-
+require_relative "./user_commands"
 class Chandrayaan3
   attr_accessor :position, :direction
 
@@ -8,5 +8,11 @@ class Chandrayaan3
   end
 
 
-
+  def get_commands
+    commands = UserCommands.commands
+    UserCommands.exicute_commands(commands, self)
+  end
 end
+
+chandrayaan3 = Chandrayaan3.new([0,0,0], 'N')
+chandrayaan3.get_commands
