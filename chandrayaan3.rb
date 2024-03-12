@@ -48,17 +48,19 @@ class Chandrayaan3
   end
 
   def move_left
-    @direction = case @direction
-    when 'N' then 'W'
-    when 'W' then 'S'
-    when 'S' then 'E'
-    when 'E' then 'N'
+    @direction = case [@prev_direction, @direction]
+    when ['N','U'],['N', 'N'], ['N', 'D'] then 'W'
+    when ['W','U'], ['W', 'W'], ['W', 'D'] then 'S'
+    when ['S','U'], ['S', 'S'], ['S', 'D'] then 'E'
+    when ['E','U'], ['E','E'], ['E','D'] then 'N'
     else
       @direction
     end
+    @prev_direction = @direction
   end
 
   def move_up
+    @prev_direction = @direction if @direction != 'U' || @direction != 'D'
     @direction = 'U'
   end
 
