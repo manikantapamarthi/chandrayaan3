@@ -39,11 +39,11 @@ class Chandrayaan3
   end
 
   def move_right
-    @direction = case @direction
-      when 'N' then 'E'
-      when 'E' then 'S'
-      when 'S' then 'W'
-      when 'W' then 'N'
+    @direction = case [@prev_direction, @direction]
+      when ['N','U'],['N', 'N'] then 'E'
+      when ['E','U'], ['E','E'] then 'S'
+      when ['S','U'], ['S', 'S'] then 'W'
+      when ['W','U'], ['W', 'W'] then 'N'
       else
         @direction
       end
