@@ -154,6 +154,13 @@ describe Chandrayaan3 do
         chandrayaan3.move_left
         expect(chandrayaan3.direction).to eq('N')
       end
+
+      it "moves up form the N direction then turn left" do
+        chandrayaan3 = Chandrayaan3.new([0,0,0], 'N')
+        chandrayaan3.move_up
+        chandrayaan3.move_left
+        expect(chandrayaan3.direction).to eq('E')
+      end
     end
 
     describe "#move_up" do
