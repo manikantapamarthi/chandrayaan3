@@ -155,5 +155,21 @@ describe Chandrayaan3 do
         expect(chandrayaan3.direction).to eq('N')
       end
     end
+
+    describe "#move_up" do
+      it "moves up direction" do
+        chandrayaan3 = Chandrayaan3.new([0,0,0], "U")
+        chandrayaan3.move_up
+        expect(chandrayaan3.move_up).to eq('U')
+      end
+    end
+
+    describe "#move_down" do
+      it "moves down direction" do
+        chandrayaan3 = Chandrayaan3.new([0,0,0], 'D')
+        chandrayaan3.move_down
+        expect(chandrayaan3.move_down).to eq('D')
+      end
+    end
   end
 end

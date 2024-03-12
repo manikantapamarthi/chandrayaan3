@@ -48,12 +48,22 @@ class Chandrayaan3
   end
 
   def move_left
+    @direction = case @direction
+    when 'N' then 'W'
+    when 'W' then 'S'
+    when 'S' then 'E'
+    when 'E' then 'N'
+    else
+      @direction
+    end
   end
 
   def move_up
+    @direction = 'U'
   end
 
   def move_down
+    @direction = 'D'
   end
 end
 
