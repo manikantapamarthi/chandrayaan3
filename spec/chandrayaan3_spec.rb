@@ -103,5 +103,27 @@ describe Chandrayaan3 do
         expect(chandrayaan3.direction).to eq('D')
       end
     end
+
+    describe "#move_right" do
+      it 'moves right from the north directions' do
+        chandrayaan3 = Chandrayaan3.new([0, 1, 0], 'N')
+        expect(chandrayaan3.position).to eq('E')
+      end
+
+      it 'moves right from the E directions' do
+        chandrayaan3 = Chandrayaan3.new([1, 0, 0], 'E')
+        expect(chandrayaan3.position).to eq('S')
+      end
+
+      it 'moves right from the S directions' do
+        chandrayaan3 = Chandrayaan3.new([0, 1, 0], 'S')
+        expect(chandrayaan3.position).to eq('W')
+      end
+
+      it 'moves right from the S directions' do
+        chandrayaan3 = Chandrayaan3.new([0, 1, 0], 'S')
+        expect(chandrayaan3.position).to eq('N')
+      end
+    end
   end
 end
