@@ -6,6 +6,8 @@ class Chandrayaan3
   def initialize(position, direction)
     @position = position
     @direction = direction
+
+    @prev_direction = direction
   end
 
 

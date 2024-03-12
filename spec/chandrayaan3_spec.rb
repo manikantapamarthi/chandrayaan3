@@ -128,6 +128,34 @@ describe Chandrayaan3 do
         chandrayaan3.move_right
         expect(chandrayaan3.direction).to eq('N')
       end
+
+      it "moves up form the N direction then turns right" do
+        chandrayaan3 = Chandrayaan3.new([0,0,0], 'N')
+        chandrayaan3.move_up
+        chandrayaan3.move_right
+        expect(chandrayaan3).to eq('E')
+      end
+
+      it "moves up form the E direction then turns right" do
+        chandrayaan3 = Chandrayaan3.new([0,0,0], 'E')
+        chandrayaan3.move_up
+        chandrayaan3.move_right
+        expect(chandrayaan3).to eq('S')
+      end
+
+      it "moves up form the S direction then turns right" do
+        chandrayaan3 = Chandrayaan3.new([0,0,0], 'S')
+        chandrayaan3.move_up
+        chandrayaan3.move_right
+        expect(chandrayaan3).to eq('W')
+      end
+
+      it "moves up form the N direction then turns right" do
+        chandrayaan3 = Chandrayaan3.new([0,0,0], 'w')
+        chandrayaan3.move_up
+        chandrayaan3.move_right
+        expect(chandrayaan3).to eq('N')
+      end
     end
 
     describe "#move_left" do
