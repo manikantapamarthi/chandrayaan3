@@ -15,7 +15,7 @@ describe UserCommands do
       chandrayaan3 = Chandrayaan3.new([0,0,0], 'N')
       commands = ['f', 'b', 'l', 'r', 'u', 'd' ]
       expect(chandrayaan3).to receive(:move_forward)
-      expect(chandrayaan3).to receive(:move_backword)
+      expect(chandrayaan3).to receive(:move_backward)
       expect(chandrayaan3).to receive(:move_right)
       expect(chandrayaan3).to receive(:move_left)
       expect(chandrayaan3).to receive(:move_up)

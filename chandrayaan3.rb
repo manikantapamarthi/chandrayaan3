@@ -69,3 +69,6 @@ end
 
 chandrayaan3 = Chandrayaan3.new([0,0,0], 'N')
 chandrayaan3.get_commands
+
+p chandrayaan3.direction
+p chandrayaan3.position
