@@ -25,7 +25,15 @@ class Chandrayaan3
     end
   end
 
-  def move_backword
+  def move_backward
+    case @direction
+    when 'E' then @position[0] -= 1
+    when 'W' then @position[0] += 1
+    when 'N' then @position[1] -= 1
+    when 'S' then @position[1] += 1
+    when 'U' then @position[2] -= 1
+    when "D" then @position[2] += 1
+    end
   end
 
   def move_right

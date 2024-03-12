@@ -67,39 +67,39 @@ describe Chandrayaan3 do
     end
     describe "#move_backward" do
       it 'moves backward in North direction' do
-        chandrayaan3 = Chandrayaan3.new([0.0,0], 'N')
+        chandrayaan3 = Chandrayaan3.new([0,0,0], 'N')
         chandrayaan3.move_backward
         expect(chandrayaan3.position).to eq([0, -1, 0])
         expect(chandrayaan3.direction).to eq('N')
       end
       it 'moves backward in South direction' do
-        chandrayaan3 = Chandrayaan3.new([0.0,0], 'S')
+        chandrayaan3 = Chandrayaan3.new([0,0,0], 'S')
         chandrayaan3.move_backward
         expect(chandrayaan3.position).to eq([0, 1, 0])
         expect(chandrayaan3.direction).to eq('S')
       end
       it 'moves backward in East direction' do
-        chandrayaan3 = Chandrayaan3.new([0.0,0], 'E')
+        chandrayaan3 = Chandrayaan3.new([0,0,0], 'E')
         chandrayaan3.move_backward
         expect(chandrayaan3.position).to eq([-1, 0, 0])
         expect(chandrayaan3.direction).to eq('E')
       end
       it 'moves backward in West direction' do
-        chandrayaan3 = Chandrayaan3.new([0.0,0], 'W')
+        chandrayaan3 = Chandrayaan3.new([0,0,0], 'W')
         chandrayaan3.move_backward
         expect(chandrayaan3.position).to eq([1, 0, 0])
         expect(chandrayaan3.direction).to eq('W')
       end
       it 'moves backward in UP direction' do
-        chandrayaan3 = Chandrayaan3.new([0.0,0], 'U')
+        chandrayaan3 = Chandrayaan3.new([0,0,0], 'U')
         chandrayaan3.move_backward
-        expect(chandrayaan3.position).to eq([0, 0, -1], 'U')
+        expect(chandrayaan3.position).to eq([0, 0, -1])
         expect(chandrayaan3.direction).to eq('U')
       end
       it 'moves backward in Down direction' do
-        chandrayaan3 = Chandrayaan3.new([0.0,0], 'D')
+        chandrayaan3 = Chandrayaan3.new([0,0,0], 'D')
         chandrayaan3.move_backward
-        expect(chandrayaan3.position).to eq([0, 0, 1], 'D')
+        expect(chandrayaan3.position).to eq([0, 0, 1])
         expect(chandrayaan3.direction).to eq('D')
       end
     end
