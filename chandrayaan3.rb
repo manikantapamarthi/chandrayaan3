@@ -67,6 +67,7 @@ class Chandrayaan3
   end
 
   def move_down
+    @prev_direction = @direction if @direction != 'U' || @direction != 'D'
     @direction = 'D'
   end
 end

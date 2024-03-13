@@ -284,4 +284,18 @@ describe Chandrayaan3 do
       end
     end
   end
+
+  describe "#final_position_and_direction" do
+    it "returns the final position and direction after executing commands" do
+      chandrayaan3 = Chandrayaan3.new([0, 0, 0], 'N')
+      commands = ['f', 'r', 'u', 'b', 'l']
+
+      allow(chandrayaan3).to receive(:get_commands).and_return(['f', 'f', 'r', 'u'])
+
+      final_position_and_direction = chandrayaan3.final_position_and_direction
+
+      expect(final_position_and_direction.position).to eq([0, 1, -1])
+      expect(final_position_and_direction.direction).to eq('N')
+    end
+  end
 end
