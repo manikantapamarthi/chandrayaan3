@@ -70,10 +70,5 @@ class Chandrayaan3
     @prev_direction = @direction if @direction != 'U' || @direction != 'D'
     @direction = 'D'
   end
+
 end
-
-chandrayaan3 = Chandrayaan3.new([0,0,0], 'N')
-chandrayaan3.get_commands
-
-p "chandrayaan current direction is #{chandrayaan3.direction}"
-p "chandrayaan current position is #{chandrayaan3.position}"
