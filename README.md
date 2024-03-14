@@ -20,7 +20,7 @@ To use the Chandrayaan3 Lunar Craft Control System, follow these steps:
 
 it will ask for the commands give like `flurb`
 
-then you get the final position of the spacecraft chandrayaan3
+then you get the final position and direction of the spacecraft chandrayaan3
    
  ## Sample output after running the chandrayaan3  
    ![Screenshot from 2024-03-13 20-23-17](https://github.com/manikantapamarthi/chandrayaan3/assets/8131497/2999de53-315e-4bc0-9b2e-c81ee3711c44)
